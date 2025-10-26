@@ -1,0 +1,161 @@
+/* reset básico */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/* wrapper e cabeçalho estilo revista */
+.page-content-wrapper {
+    max-width: 1020px;
+    margin: 36px auto;
+    padding: 24px;
+
+}
+
+
+.page-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: -0.5px;
+    color: #05294b;
+}
+
+.page-header .subtitle {
+    margin: 8px 0 0;
+    color: #3b556c;
+}
+
+/* grid principal - vertical stack com gap (cada persona é um artigo/card) */
+.personas-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    /* Centraliza os cards no eixo horizontal */
+    align-items: center;
+    max-width: 100%;
+}
+
+
+
+/* card persona (magazine-like) */
+.persona {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 12px 30px rgba(10, 30, 60, 0.784);
+    overflow: hidden;
+
+}
+
+/* estrutura interna: .text (esquerda) e .media (direita) */
+.persona .text {
+    flex: 1 1 58%;
+    padding-right: 12px;
+}
+
+.persona .media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* ícone grande estilo revista */
+.persona-icon {
+    font-size: 40px;
+    color: #074a96;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* título e destaque */
+.persona h2 {
+    margin: 6px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #076cc0;
+}
+
+.persona .lead {
+    margin: 6px 0 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    
+    color: #1f3f5b;
+}
+
+/* imagem */
+.persona img {
+    height: 300px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(10, 30, 60, 0.3);
+}
+
+/* layout alternado: .reverse -> imagem à esquerda e texto à direita */
+.persona.reverse {
+    flex-direction: row-reverse;
+    background: #ecedee13;
+}
+
+.persona.reverse .text {
+    padding-right: 0;
+    padding-left: 12px;
+}
+
+/* efeitos tipográficos extras para parecer revista */
+.persona p {
+    color: #36556f;
+    line-height: 1.6;
+    margin: 0 0 10px;
+    font-size: 0.98rem;
+
+}
+
+/* espaçamento maior entre parágrafos */
+.persona .text p+p {
+    margin-top: 10px;
+}
+
+/* responsivo: empilha em mobile (cards verticais) */
+@media (max-width: 900px) {
+    .persona {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .persona.reverse {
+        flex-direction: column;
+    }
+
+    .persona .text {
+        padding: 0;
+    }
+
+    .persona .media {
+        width: 100%;
+    }
+
+    .persona img {
+        height: 220px;
+        max-width: 380px;
+    }
+}
+
+/* opcional: quando quiser destacar o primeiro card (maior) */
+.persona:first-of-type {
+    transform: translateY(-2px);
+    border-left: 6px solid rgba(11, 107, 214, 0.12);
+}
+
+/* footer simple */
+.page-footer {
+    text-align: center;
+    margin-top: 28px;
+}
