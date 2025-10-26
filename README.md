@@ -11,9 +11,8 @@ O objetivo é apresentar artigos, imagens e seções de forma organizada, com la
 - Menu de navegação funcional.
 - Layout responsivo básico para telas menores.
 
-## Tecnologias Utilizadas
-![HTML5](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg)
-![CSS3](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg)
+
+
 
 ## Como Rodar
 1. Clone este repositório:
